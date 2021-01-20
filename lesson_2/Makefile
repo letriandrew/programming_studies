@@ -1,6 +1,6 @@
 CC=g++
 
-all: factor intro_vector prime2 prime primitives
+all: factor intro_vector prime2 prime primitives stringtovector
 
 factor:
 	$(CC) -o factor.out factor.cpp
@@ -16,6 +16,9 @@ prime:
 
 primitives:
 	$(CC) -o primitives.out primitives.cpp
+
+stringtovector:
+	$(CC) -o stringtovector.out stringtovector.cpp
 
 clean: 
 	rm *.out *.o
