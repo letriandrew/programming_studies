@@ -1,24 +1,25 @@
 CC=g++
+FLAGS=-std=c++17 -Wall -g
 
 all: factor intro_vector prime2 prime primitives stringtovector
 
 factor:
-	$(CC) -o factor.out factor.cpp
+	$(CC) $(FLAGS) -o factor.out factor.cpp
 
 intro_vector:
-	$(CC) -o intro_vector.out intro_vector.cpp
+	$(CC) $(FLAGS) -o intro_vector.out intro_vector.cpp
 
 prime2:
-	$(CC) -o prime2.out prime2.cpp
+	$(CC) $(FLAGS) -o prime2.out prime2.cpp
 
 prime:
-	$(CC) -o prime.out prime.cpp
+	$(CC) $(FLAGS) -o prime.out prime.cpp
 
 primitives:
-	$(CC) -o primitives.out primitives.cpp
+	$(CC) $(FLAGS) -o primitives.out primitives.cpp
 
 stringtovector:
-	$(CC) -o stringtovector.out stringtovector.cpp
+	$(CC) $(FLAGS) -o stringtovector.out stringtovector.cpp
 
 clean: 
 	rm *.out *.o
