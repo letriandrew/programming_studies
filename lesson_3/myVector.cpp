@@ -26,43 +26,42 @@ void printVector(vector<int> vec)
 
 vector<int> reverseVector(vector<int> vec)
 {
-	vector<int> revvec = vec;
-	int xd = 0;
+	vector<int> revvec;
 	
 	for(int i = vec.size()-1; i >= 0; i--)
 	{
-		revvec[xd] = vec[i];
-		xd++;
+		revvec.push_back(vec[i]);
 	}
 	
-	vec = revvec;
+	return revvec;
 }
 
 void emptyVector(vector<int>& vec)
 {
-	//function to clear vec
 	vec.clear();
 }
 
 vector<int> multVector(vector<int> vec, int mult)
 {
-	//for loop to go through each vector interval and multiply it back int mult
+	vector<int> multvec;	
+
 	for(int i = 0; i < vec.size(); i++)
 	{
-		vec[i] = vec[i] * mult;
+		multvec.push_back(vec[i] * mult);
 	}
+
+	return multvec;
 }
 
 bool isEmptyVector(vector<int> vec)
 {
-	//function checks if vec is empty and cout result
 	if(vec.empty())
 	{
-		cout << "The vector is empty. " << endl;
+		return true;
 	}
 
 	else
 	{
-		cout  << "The vector is not empty. " << endl;
+		return false;
 	}
 }
