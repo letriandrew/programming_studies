@@ -1,6 +1,6 @@
 CC=g++
 
-all: animal_struct shapes_struct shapes
+all: animal_struct shapes_struct shapes person
 
 animal_struct:
 	$(CC) -o Bin/animal_struct.out Structs/animal_struct.cpp
@@ -10,6 +10,9 @@ shapes_struct:
 
 shapes:
 	$(CC) -o Shapes/bin/shapes.out Shapes/src/main.cpp Shapes/src/shapes.cpp
+
+person:
+	$(CC) -o Person/bin/Person.out Person/src/main.cpp Person/src/Hair.cpp Person/src/Person.cpp
 
 clean:
 	rm Bin/*.out
