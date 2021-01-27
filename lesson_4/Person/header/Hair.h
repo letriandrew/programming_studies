@@ -12,5 +12,5 @@ struct Hair
 	bool swag;
 
 	Hair (string hair);
-}
+};
 #endif
