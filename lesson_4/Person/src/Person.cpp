@@ -20,7 +20,7 @@ Person::Person(string iname, double iage, double iheight, double iweight, string
 	this->hair = Hair(ihair);
 }
 
-void print()
+void Person::print()
 {
 	cout << this->name << endl;
 	cout << this->age << endl;
@@ -30,53 +30,53 @@ void print()
 }
 
 //setter
-void setName(string tname)
+void Person::setName(string tname)
 {
 	this->name = tname;
 }
 
-void setAge(double tage)
+void Person::setAge(double tage)
 {
 	this->age = tage;
 }
 
-void setHeight(double theight)
+void Person::setHeight(double theight)
 {
 	this->height = theight;
 }
 
-void setWeight(double tweight)
+void Person::setWeight(double tweight)
 {
 	this->weight = tweight;
 }
 
-void setHair(string thair)
+void Person::setHair(string thair)
 {
 	this->hair = thair;
 }
 
 //getter
-string getName()
+string Person::getName()
 {
 	return this->name;
 }
 
-double getAge()
+double Person::getAge()
 {
 	return this->age;
 }
 
-double getHeight()
+double Person::getHeight()
 {
 	return this->height;
 }
 
-double getWeight()
+double Person::getWeight()
 {
 	return this->weight;
 }
  
-Hair getHair()
+Hair Person::getHair()
 {
-	return this ->hair;
+	return this->hair;
 }
