@@ -11,6 +11,8 @@ struct Hair
 	string color;
 	bool swag;
 
+	Hair ();
 	Hair (string hair);
+	void print();
 };
 #endif

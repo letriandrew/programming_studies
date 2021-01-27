@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 #include "Hair.h"
+#include "Person.h"
 using namespace std;
 // for each struct: constructors, getters, setters (defaults too). do actions a person would do (change addy, change hair, lose weight(excercise()), etc [THREE ACTIONS]). 
 // main.cpp -> create 4 people that have data for all variables (diff) and print
@@ -9,6 +10,11 @@ using namespace std;
 //constructor
 Person::Person()
 {
+	this->name = "John";
+	this->age = 21;
+	this->height = 120;
+	this->weight = 150;
+	this->hair = Hair("mohawk");
 }
 
 Person::Person(string iname, double iage, double iheight, double iweight, string ihair)
@@ -25,8 +31,8 @@ void Person::print()
 	cout << this->name << endl;
 	cout << this->age << endl;
 	cout << this->height << endl;
-	cout << this->weight << endl;
-	cout << this->hair << endl; 
+	cout << this->weight << endl; 
+	hair.print();
 }
 
 //setter
@@ -52,7 +58,7 @@ void Person::setWeight(double tweight)
 
 void Person::setHair(string thair)
 {
-	this->hair = thair;
+	this->hair = Hair(thair);
 }
 
 //getter

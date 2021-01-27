@@ -5,6 +5,13 @@
 using namespace std;
 
 
+Hair::Hair()
+{
+	this->texture = "sleak";
+	this->color = "any";
+	this->swag = true;
+}
+
 Hair::Hair (string hair)
 {
 	if(hair == "mohawk")
@@ -36,3 +43,18 @@ Hair::Hair (string hair)
 	}
 }
 
+void Hair::print()
+{
+	cout << this->texture << endl;
+	cout << this->color << endl;
+
+	if(this->swag==true)
+	{
+		cout << "This hair is sawg!" << endl;
+	}
+
+	else 
+	{
+		cout << "Hair not so swag" << endl;
+	}
+}

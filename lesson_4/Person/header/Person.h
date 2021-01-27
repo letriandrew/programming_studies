@@ -44,5 +44,5 @@ struct Person
 	double getWeight();
 	 
 	Hair getHair();
-}
+};
 #endif
