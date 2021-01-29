@@ -1,0 +1,54 @@
+Markup Files
+---------------------------
+.txt = text document
+	- just text
+
+.md = mark down
+	- text file
+	- formatting (bold, itali)
+	- display on github
+
+.html = hyper text markup language
+	- cracked formatting lol
+
+Spreadsheet
+----------------------------	
+.xlsx 
+	- common excel
+.csv 
+	- common excel
+
+Programming Languages
+-----------------------------
+.cpp 
+	- C++
+.c
+	- C
+.py 
+	- Python
+.js
+	- Javascript
+.css
+	- CSS (cascading style sheets)
+.java
+	- Java
+.rb 
+	- Ruby
+.cs 
+	- C# (C Sharp)
+.ipynb
+	- Jupyter
+
+Misc
+-------------------------------
+.json = Java Script Object Notation
+	- key value storage
+.exe = executable
+	- Windows
+.out  
+	- output file
+.min 
+	- input file
+.dat
+	- store data
+
