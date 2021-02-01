@@ -68,13 +68,13 @@ void Hero::move(double tx, double ty)
 	this->x = tx;
 	this->y = ty;
 }
-void Hero::talk(Hero::Hero thero)
+void Hero::talk(Hero thero)
 {
 	cout << this->name <<" talks to " << thero.name;
 }
-void Hero::attack(Hero::Hero thero, string tweapon)
+void Hero::attack(Hero thero, string tweapon)
 {
-	cout << this->name << " attacks " << thero << " with " << tweapon;
+	cout << this->name << " attacks " << thero.name << " with " << tweapon;
 }
 void Hero::attack(string tweapon)
 {
