@@ -1,4 +1,5 @@
-#include <iostream>
+#input < rand(n);
+include <iostream>
 #include <string>
 #include <fstream>
 #include "RandomFile.h"
