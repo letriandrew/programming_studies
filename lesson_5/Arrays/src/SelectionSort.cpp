@@ -1,14 +1,14 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "BubbleSort.h"
+#include "SelectionSort.h"
 using namespace std;
  
-BubbleSort()
+SelectionSort()
 {
 }
 
-BubbleSort(int arr[], int n)
+SelectionSort(int arr[], int n)
 {
 	this->readarr(arr,n);
 }
@@ -34,16 +34,20 @@ void readfile(string file)
 	}
 
 void sort()
-{
-	for(int i = vec.size(); i > 0; i--)
+{	
+	for(int i = 0; i < vec.size(); i++)
 	{
-		for(int j = 0; j < (i-1); j++)
+		int index = i;
+		int min = vec[i];
+		for(int j = i; j < vec.size(); j++)
 		{
-			if(vec[j] > vec[j+1])
+			if(vec[j] < min)
 			{
-				swap(vec[j], vec[j+1]);
+				min = vec[j];
+				index = j;
 			}
 		}
+		swap(vec[i], vec[index]);
 	}
 }
 
