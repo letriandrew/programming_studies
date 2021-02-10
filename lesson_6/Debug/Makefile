@@ -1,6 +1,8 @@
 CC=g++
+OUT_DIR=bin/
 
 all: debug1 debug2 debug3
+
 
 debug1:
 	$(CC) -o debug1.out debug1.cpp
