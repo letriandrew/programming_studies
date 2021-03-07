@@ -1,0 +1,3 @@
+generalizations = metasyntatic names 
+-> foo, bar
+
