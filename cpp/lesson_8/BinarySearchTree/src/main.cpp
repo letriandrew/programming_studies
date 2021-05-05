@@ -15,8 +15,11 @@ int main()
 	tree.insert(9);
 	tree.insert(1);
 	tree.display();
+	cout << endl;
 	cout << tree.find(1) << endl;
 	cout << tree.find(69) << endl;
+	tree.remove(9);
+	tree.display();
 	tree.clear();
 	tree.display();
 	//insert -> void

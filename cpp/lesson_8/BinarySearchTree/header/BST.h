@@ -16,7 +16,7 @@ class BST{
 	void removehelper(Node*, int);
 	void displayhelper(Node*);
 	void clearhelper(Node*);
-	Node* findhelper(Node*,  int);
+	Node* findhelper(Node*, int);
 	
 	public:
 	BST();
@@ -26,6 +26,7 @@ class BST{
 	void clear();
 	Node* find(int);
 	void display();
+	void insertnode(Node*, Node*);
 };
 
 

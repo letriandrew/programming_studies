@@ -57,6 +57,34 @@ void BST::inserthelper(Node* node, int data)
 	
 }
 
+void BST::insertnode(Node* node, Node* insert)
+{
+	if(node == nullptr || insert == nullptr)
+	{
+		return;
+	}
+	if(node->data == insert->data)
+	{
+		return;
+	}	
+	if(node->data > insert->data && node->left == nullptr)
+	{
+		node->left = insert;
+	}
+	else if(node->data < insert->data && node->right == nullptr)
+	{
+		node->right = insert;
+	}
+	else if(node->data > insert->data)
+	{
+		this->insertnode(node->left, insert);
+	}
+	else if(node->data < insert->data)
+	{
+		this->insertnode(node->right, insert);
+	}
+}
+
 void BST::display()
 {
 	this->displayhelper(root);
@@ -119,8 +147,49 @@ Node* BST::findhelper(Node* node, int data)
 }
 
 void BST::remove(int data)
-{}
+{
+	if(root == nullptr)
+	{
+		return;	
+	}
+	if(root->data == data)
+	{
+		Node* left = root->left;
+		Node* right = root->right;
+		delete root;
+		root = right;
+		insertnode(root, left);
+		return;
+	}
+	this->removehelper(root, data);	
+}
 
 void BST::removehelper(Node* node, int data)
 {
-}
+	Node* left;
+	Node* right;
+	if(node == nullptr)
+	{
+		return;
+	}
+	if(node->left->data == data)
+	{
+		left = node->left->left;
+		right = node->left->right;
+		delete node->left;
+		node->left = left;
+		insertnode(node, right);
+		return;
+	}
+	else if(node->right->data == data)
+	{
+		left = node->right->left;
+		right = node->right->right;
+		delete node->right;
+		node->right = right;
+		insertnode(node, left);
+		return;
+	}
+	this->removehelper(node->left, data);
+	this->removehelper(node->right, data);
+ }
